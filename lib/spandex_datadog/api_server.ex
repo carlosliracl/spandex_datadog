@@ -348,6 +348,7 @@ defmodule SpandexDatadog.ApiServer do
     |> Map.put("http.url", http[:url])
     |> Map.put("http.status_code", status_code)
     |> Map.put("http.method", http[:method])
+    |> Map.put("http.user_agent", http[:user_agent])
   end
 
   @spec add_sql_data(map, Span.t()) :: map
